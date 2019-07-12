@@ -1,6 +1,13 @@
 import { createStore } from 'redux';
 
-const reducerManager = (state, action) => {
-}
+const initialState = {
+  players: [],
+  titular_players: [],
+  substitute_players: []
+};
 
-export default createStore();
+const reducerManager = (state = initialState, action) => {
+  return state;
+};
+
+export default createStore(reducerManager);
