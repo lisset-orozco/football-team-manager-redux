@@ -1,6 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const Players = () => (
+const Players = ({players}) => (
   <section>
     <h2>Players</h2>
     <div className="players-container">
@@ -16,4 +17,8 @@ const Players = () => (
   </section>
 );
 
-export default Players;
+const mapStateToProps = state => ({
+  players: state.players
+});
+
+export default connect(mapStateToProps, {} )(Players);
