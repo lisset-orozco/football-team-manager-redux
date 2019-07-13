@@ -3,5 +3,5 @@ This project is a Footbal Manager website to learn React, thanks to the develope
 ##  Mockup Football Team
 
 <p align="center">
-  <img src="assets/images/1_mock_up.png">
+  <img src="assets/images/1_mock_up.png" width="460" height="auto" >
 </p>
