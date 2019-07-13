@@ -9,7 +9,18 @@ const initialState = {
 };
 
 const reducerManager = (state = initialState, action) => {
-  return state;
+  switch(action.type) {
+    case 'ADD_TITULAR':
+      return {
+        ...state,
+        titular_players: state.titular_players.concat(action.player),
+      }
+
+    default:
+      return {
+        ...state
+      }
+  }
 };
 
 export default createStore(reducerManager);
