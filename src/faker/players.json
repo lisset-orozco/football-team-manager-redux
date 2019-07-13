@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Raul Gonzalez",
+    "photo": "https://cdn1.iconfinder.com/data/icons/soccer-football-players-african/100/soccer-player-african-04-128.png"
+  },
+  {
+    "id": 2,
+    "name": "Andres Palacios",
+    "photo": "https://cdn1.iconfinder.com/data/icons/soccer-football-players-african/100/soccer-player-african-05-128.png"
+  },
+  {
+    "id": 3,
+    "name": "David Mendoza",
+    "photo": "https://cdn1.iconfinder.com/data/icons/soccer-football-players-latino/100/soccer-player-latino-01-128.png"
+  }
+]
