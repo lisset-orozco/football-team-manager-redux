@@ -21,6 +21,7 @@ const reducerManager = (state = initialState, action) => {
       return {
         ...state,
         substitute_players: state.substitute_players.concat(action.player),
+        players: state.players.filter(p => p.id !== action.player.id)
       }
 
     default:
