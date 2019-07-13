@@ -23,6 +23,12 @@ const reducerManager = (state = initialState, action) => {
         substitute_players: state.substitute_players.concat(action.player),
         players: state.players.filter(p => p.id !== action.player.id)
       }
+    
+    case 'REMOVE_TITULAR':
+      return {
+        ...state,
+        players: state.players.concat(action.player),
+      }
 
     default:
       return {

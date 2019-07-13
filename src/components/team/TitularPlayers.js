@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const TitularPlayers = ({ titular_players }) => (
+const TitularPlayers = ({ titular_players, removeTitularPlayer }) => (
   <section>
     <h2>Titular Players</h2>
     <div className="football-field">
@@ -10,7 +10,7 @@ const TitularPlayers = ({ titular_players }) => (
         <article className='titular_player' key={player.id}>
           <div>
             <img src={player.photo} alt={player.name}/>
-            <button>X</button>
+            <button onClick={() => removeTitularPlayer(player)}>X</button>
           </div>
           <p>{player.name}</p>
         </article>
@@ -24,6 +24,13 @@ const mapStateToProps = state => ({
   titular_players: state.titular_players
 });
 
-const mapDispatchToProps = dispatch => ({});
+const mapDispatchToProps = dispatch => ({
+  removeTitularPlayer(player) {
+    dispatch({
+      type: 'REMOVE_TITULAR',
+      player
+    })
+  }
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(TitularPlayers);
